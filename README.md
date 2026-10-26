@@ -13,7 +13,7 @@ Use XGBoost to distinguish simulated Higgs signal events from background events.
 | [Higgs_XGBoost_Workshop.ipynb](Higgs_XGBoost_Workshop.ipynb) | Exercise instructions, worked examples, model training, evaluation, and comparison plots |
 | [higgs_subset.csv.gz](higgs_subset.csv.gz) | Complete workshop dataset: 550,000 simulated events, compressed without changing the CSV contents |
 
-The notebook reads `higgs_subset.csv.gz` directly using pandas. **No extraction or Git LFS is required.** An existing uncompressed `higgs_subset.csv` also works.
+The notebook reads `higgs_subset.csv.gz` directly using pandas. An existing uncompressed `higgs_subset.csv` also works.
 
 ## Download the materials
 
