@@ -31,10 +31,10 @@ Alternatively, select **Code > Download ZIP** on the repository page and extract
 The dataset is supplied as `higgs_subset.csv.gz`, a gzip-compressed CSV file. To create an uncompressed CSV on Linux, WSL, or DARWIN, run the following command from the directory containing the dataset:
 
 ```bash
-gzip -dk higgs_subset.csv.gz
+gzip -dc higgs_subset.csv.gz > higgs_subset.csv
 ```
 
-This creates `higgs_subset.csv` in the same directory. The `-d` option decompresses the file, and `-k` keeps the original `.gz` file. Allow approximately 170 MB of additional disk space for the uncompressed CSV.
+This creates `higgs_subset.csv` in the same directory while keeping the original `.gz` file. The `-d` option decompresses the file, and `-c` writes the decompressed data to standard output, which `>` saves to the CSV. It overwrites an existing `higgs_subset.csv`, so run it only when you want to create or replace that file. Allow approximately 170 MB of additional disk space for the uncompressed CSV.
 
 Keep `higgs_subset.csv` beside `Higgs_XGBoost_Workshop.ipynb`. The notebook automatically uses the uncompressed CSV when present, otherwise it reads `higgs_subset.csv.gz` directly. You do not need to change the notebook's data path for either option.
 
